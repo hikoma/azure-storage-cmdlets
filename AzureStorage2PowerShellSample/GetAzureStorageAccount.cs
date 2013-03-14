@@ -4,8 +4,8 @@ using Microsoft.WindowsAzure.Storage.Auth;
 
 namespace AzureStorage2PowerShellSample
 {
-    [Cmdlet(VerbsCommon.Get, "BlobClient")]
-    public class GetBlobClient : Cmdlet
+    [Cmdlet(VerbsCommon.Get, "AzureStorageAccount")]
+    public class GetAzureStorageAccount : Cmdlet
     {
         [Parameter(Mandatory = true)]
         public string AccountName;
@@ -20,7 +20,7 @@ namespace AzureStorage2PowerShellSample
         {
             var credentials = new StorageCredentials(AccountName, KeyValue);
             var account = new CloudStorageAccount(credentials, UseHttps);
-            WriteObject(account.CreateCloudBlobClient());
+            WriteObject(account);
         }
     }
 }
