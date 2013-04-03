@@ -4,8 +4,8 @@ using Microsoft.WindowsAzure.Storage.Auth;
 
 namespace AzureStorage2PowerShellSample
 {
-    [Cmdlet(VerbsCommon.Get, "AzureStorageAccount")]
-    public class GetAzureStorageAccount : Cmdlet
+    [Cmdlet(VerbsCommon.Get, "AzureStorage2Account")]
+    public class GetAzureStorage2Account : Cmdlet
     {
         [Parameter(Mandatory = true)]
         public string AccountName;

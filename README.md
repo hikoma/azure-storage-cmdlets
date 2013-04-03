@@ -18,9 +18,9 @@ PS C:\azure-storage-cmdlets> Get-Module -Name AzureStorage2PowerShellSample
 
 ModuleType Name                                ExportedCommands
 ---------- ----                                ----------------
-Binary     AzureStorage2PowerShellSample       Get-AzureStorageAccount
+Binary     AzureStorage2PowerShellSample       Get-AzureStorage2Account
 
-PS C:\azure-storage-cmdlets> $account = Get-AzureStorageAccount -AccountName <name> -KeyValue <key>
+PS C:\azure-storage-cmdlets> $account = Get-AzureStorage2Account -AccountName <name> -KeyValue <key>
 PS C:\azure-storage-cmdlets> $client = $account.CreateCloudBlobClient()
 PS C:\azure-storage-cmdlets> $container = $client.GetContainerReference("test")
 PS C:\azure-storage-cmdlets> $container.CreateIfNotExists()
